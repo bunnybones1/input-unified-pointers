@@ -2,23 +2,34 @@ var Pointers = require('./');
 
 var QuickText = require('dom-quick-text');
 
+var containerBumpDiv = document.createElement('div');
+containerBumpDiv.id = 'threejsContainerBump';
+document.getElementsByTagName('body')[0].appendChild(containerBumpDiv);
+console.log(containerBumpDiv);
+containerBumpDiv.style.position = 'relative';
+containerBumpDiv.style.left = '25px';
+containerBumpDiv.style['background-color'] = '#00ff00';
+containerBumpDiv.style.top = '25px';
+containerBumpDiv.style.width = '400px';
+containerBumpDiv.style.height = '50px';
+
 var containerDiv = document.createElement('div');
 containerDiv.id = 'threejsContainer';
 document.getElementsByTagName('body')[0].appendChild(containerDiv);
 console.log(containerDiv);
-containerDiv.style.position = 'absolute';
-containerDiv.style.left = '25%';
+containerDiv.style.position = 'relative';
+containerDiv.style.left = '25px';
 containerDiv.style['background-color'] = '#00ff00';
-containerDiv.style.top = '25%';
-containerDiv.style.width = '50%';
-containerDiv.style.height = '50%';
+containerDiv.style.top = '25px';
+containerDiv.style.width = '500px';
+containerDiv.style.height = '200px';
 
 
 
 var containerChildDiv = document.createElement('div');
 containerChildDiv.id = 'subContainer';
 containerDiv.appendChild(containerChildDiv);
-containerChildDiv.style.position = 'absolute';
+containerChildDiv.style.position = 'relative';
 containerChildDiv.style.left = '25%';
 containerChildDiv.style['background-color'] = '#7fff00';
 containerChildDiv.style.top = '25%';
