@@ -36,9 +36,9 @@ function logHistory(x, y, time) {
 }
 //
 
-function UnifiedPointers(targetElement) {
+function UnifiedPointers(targetElement, optionalUpTargetElement) {
 	this.touch = new Touch(targetElement);
-	this.mouse = new Mouse(targetElement);
+	this.mouse = new Mouse(targetElement, undefined, optionalUpTargetElement);
 	this.onPointerSelectSignal = new signals.Signal();
 	this.onPointerDownSignal = new signals.Signal();
 	this.onPointerUpSignal = new signals.Signal();
